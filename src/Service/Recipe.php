@@ -14,8 +14,8 @@ class Recipe
      * @param string $searchStringRecipe
      * @return array([json])
      */
-    public static function searchRecipe(string $searchStringRecipe = '' ) : Stream
-    {;
+    public static function searchRecipe(string $searchStringRecipe) : Stream
+    {
         // set the Optional Parameter [ q : normal search query ]
         // set http://www.recipepuppy.com/about/api/
         $qParameter = ['q' => $searchStringRecipe ] ;
