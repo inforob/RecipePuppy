@@ -11,14 +11,14 @@ class Recipe
     /**
      * return a json recipes
      * 
-     * @param string $searchStringRecipe
-     * @return array([json])
+     * @param  string $searchStringRecipe
+     * @return \GuzzleHttp\Psr7\Stream;
      */
-    public static function searchRecipe(string $searchStringRecipe) : Stream
+    public static function searchRecipe(string $StringRecipe, string $StringIngredients, int $page = 1 ) : Stream
     {
         // set the Optional Parameter [ q : normal search query ]
         // set http://www.recipepuppy.com/about/api/
-        $qParameter = ['q' => $searchStringRecipe ] ;
+        $qParameter = ['q' => $StringRecipe , 'i' => $StringIngredients , 'p' => $page ] ;
 
         $params = [
             'query' => $qParameter

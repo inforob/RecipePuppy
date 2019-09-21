@@ -2,7 +2,9 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-
-index:
-    path: /home
-    controller: App\Controller\HomeController::index
+search:
+    path: /api/v1/search
+    controller: App\Controller\ApiController::search
+recipes:
+    path: /api/v1/recipes/{page}
+    controller: App\Controller\ApiController::recipes

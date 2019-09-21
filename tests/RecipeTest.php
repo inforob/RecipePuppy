@@ -11,7 +11,7 @@ class RecipeTest extends TestCase
     {
         $RecipeService = new Recipe();
 
-        $recipes = $RecipeService->searchRecipe('ssss');
+        $recipes = $RecipeService->searchRecipe('Vegetables','onion');
         
         $arrayResponse = json_decode($recipes) ;
         $countRecipes  = count($arrayResponse->results) ;
@@ -23,7 +23,7 @@ class RecipeTest extends TestCase
     {
         $RecipeService = new Recipe();
 
-        $recipes = $RecipeService->searchRecipe('Vegetables');
+        $recipes = $RecipeService->searchRecipe('Vegetables','onions,garlic');
         
         $arrayResponse = json_decode($recipes) ;
         $countRecipes  = count($arrayResponse->results) ;
