@@ -1,5 +1,5 @@
 <?php
-/* /src/Service/DniGenerator.php */
+
 namespace App\Service;
 
 use GuzzleHttp;
@@ -7,7 +7,7 @@ use GuzzleHttp\Psr7\Stream;
 
 class Recipe
 {
-    
+    const URL = 'http://www.recipepuppy.com';
     /**
      * return a json recipes
      * 
@@ -25,7 +25,7 @@ class Recipe
         ];
 
         // create a client with a base URI
-        $client = new GuzzleHttp\Client(['base_uri' => 'http://www.recipepuppy.com']);
+        $client = new GuzzleHttp\Client(['base_uri' => self::URL]);
         // send a request to api
         $response = $client->request('GET', 'api', $params );
         // return response 

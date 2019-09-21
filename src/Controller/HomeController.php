@@ -13,7 +13,7 @@ class HomeController
      */
     public function index(Recipe $RecipeService)
     {
-        $titleRecipe = 'Parmesan';
+        $titleRecipe = 'Cheese';
 
         $recipes = $RecipeService->searchRecipe($titleRecipe);
         
